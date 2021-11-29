@@ -1,0 +1,8 @@
+- import_tasks: preflight.RedHat.yml
+  when: ansible_os_family == 'RedHat'
+- import_tasks: preflight.Debian.yml
+  when: ansible_os_family == 'Debian'
+- import_tasks: docker.RedHat.yml
+  when: ansible_os_family == 'RedHat'
+- import_tasks: docker.Debian.yml
+  when: ansible_os_family == 'Debian'
