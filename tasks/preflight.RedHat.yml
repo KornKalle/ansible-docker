@@ -14,9 +14,9 @@
     state: stopped
     enabled: false
 
-- name: Disable SELinux
+- name: Put SELinux in Permissive Mode
   ansible.posix.selinux:
-    state: disabled
+    state: permissive
 
 - name: Install some packages
   dnf:
